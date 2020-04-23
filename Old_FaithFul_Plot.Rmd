@@ -1,0 +1,17 @@
+
+## Plot Using Plotly
+
+### This is a plot of the duration of Old Faithful's eruptions based on the waiting time between eruptions.
+
+```{r date, echo=FALSE}
+        Date <- format(Sys.Date(), "%A %d, %Y")
+        
+```
+
+### `r Date`
+
+```{r plot, message=FALSE}
+        library(plotly)
+        faithful <- (faithful)
+        plot_ly(faithful, x = faithful$waiting, y = faithful$eruptions, mode = "markers")
+```
